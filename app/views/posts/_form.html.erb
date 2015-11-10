@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :choice %><br>
-    <%= f.text_field :choice %>
+    <%= f.collection_radio_buttons :choice, {choice1: 'Choice 1', choice2: 'Choice 2'}.map{|k,v| OpenStruct.new(value: k, label: v) }, :value, :label %>
   </div>
 
   <div class="actions">
